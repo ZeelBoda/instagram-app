@@ -4,7 +4,7 @@ import Grid  from '@material-ui/core/Grid';
 import StatusBar from '../StatusBar/StatusBar';
 import MainPage from '../MainPage/MainPage';
 import InfoSection from '../InfoSection/InfoSection';
-import Suggestions from '../Suggestions/Suggestions';
+// import Suggestions from '../Suggestions/Suggestions';
 
 
 class MainContent extends Component {
@@ -25,7 +25,7 @@ class MainContent extends Component {
                     </Grid>
                     <Grid item xs={2}>
                         <InfoSection />
-                        <Suggestions />
+                        {/* <Suggestions /> */}
                     </Grid>
                     <Grid item xs={2}>
                     </Grid>
