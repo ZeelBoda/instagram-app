@@ -4,20 +4,23 @@ import com.technicalinterview.instagramclone.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/users")
 public class Usercontroller {
 
     @Autowired
     UserService userService;
+
     @PostMapping("")
-    private boolean submitUser(@RequestBody Users users) {
-        userService.submitMetaDataOfUser(users);
-        return true;
+    private Users submitUser(@RequestBody Users users) {
+       return userService.submitMetaDataOfUser(users);
+
     }
     @GetMapping("/{userid}")
     private Users getUserDetails(@PathVariable("userid") String userId)
     {
-        return new Users();
+        return userService.displayUserMetaData(userId);
+
     }
 }
